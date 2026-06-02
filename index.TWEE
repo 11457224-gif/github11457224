@@ -1,0 +1,374 @@
+:: StoryData
+{
+  "ifid": "33333333-3333-3333-3333-333333333333",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "start": "Start"
+}
+
+:: StoryInit
+<<set $score = 0>>
+
+:: StoryCaption
+<div style="padding:10px; font-size:20px;">
+🏆 目前分數：<<print $score>> / 100
+</div>
+
+:: StoryStylesheet [stylesheet]
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 1.8;
+    font-size: 22px;
+    background-color: #f2f2f2;
+}
+
+.passage {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+h1 {
+    color: #2c5aa0;
+}
+
+.choice a {
+    display: block;
+    margin: 12px 0;
+    padding: 12px;
+    background: #dfefff;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.choice a:hover {
+    background: #b9dbff;
+}
+
+.vocab {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+:: Start
+<<set $score = 0>>
+
+# 留學生的第一週
+
+旁白：
+Tom 是來自日本的大學生。  
+今年，他來台灣當一年的<span class="vocab">交換學生</span>。  
+今天是他第一天到台灣的大學上課。
+
+Tom：
+我有一點緊張，希望可以認識新朋友。
+
+旁白：
+Tom 走進校園時，看見很多學生。
+
+Tom：
+校園真的很大，我差一點找不到<span class="vocab">教室</span>。
+
+旁白：
+這時，一位台灣學生走過來。
+
+小安：
+你好！你是新同學嗎？
+
+Tom：
+對，我叫 Tom，來自日本。
+
+小安：
+歡迎你來台灣！我是小安。
+
+Tom：
+謝謝你。我不太會說中文。
+
+小安：
+沒關係，我可以慢慢跟你說。
+
+旁白：
+上課後，小安帶 Tom 去學校附近的<span class="vocab">夜市</span>。
+
+Tom：
+這裡真的很熱鬧！
+
+小安：
+很多學生下課後都會來夜市吃東西。
+
+Tom：
+我聞到很香的味道！
+
+小安：
+你想吃<span class="vocab">牛肉麵</span>嗎？
+
+Tom：
+好啊！我以前只在日本吃過。
+
+旁白：
+吃完牛肉麵後，小安又買了一杯<span class="vocab">珍珠奶茶</span>。
+
+Tom：
+太好喝了！難怪日本也有很多台灣飲料店。
+
+小安：
+如果你喜歡，我下次再帶你去別的地方。
+
+Tom：
+太好了！我開始喜歡台灣的生活了。
+
+---
+
+# 生詞
+
+1. 交換學生  
+2. 教室  
+3. 夜市  
+4. 牛肉麵  
+5. 珍珠奶茶  
+
+[[開始測驗->Q1]]
+
+:: Q1
+# 問題 1（10分）
+
+Tom 從哪裡來？
+
+<div class="choice">
+[[日本->Q1A]]
+[[韓國->Q1B]]
+</div>
+
+:: Q1A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[下一題->Q2]]
+
+:: Q1B
+❌ 答錯了。
+
+[[下一題->Q2]]
+
+:: Q2
+# 問題 2（10分）
+
+Tom 來台灣做什麼？
+
+<div class="choice">
+[[當交換學生->Q2A]]
+[[工作->Q2B]]
+</div>
+
+:: Q2A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[下一題->Q3]]
+
+:: Q2B
+❌ 答錯了。
+
+[[下一題->Q3]]
+
+:: Q3
+# 問題 3（10分）
+
+Tom 第一天下課後去哪裡？
+
+<div class="choice">
+[[夜市->Q3A]]
+[[圖書館->Q3B]]
+</div>
+
+:: Q3A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[下一題->Q4]]
+
+:: Q3B
+❌ 答錯了。
+
+[[下一題->Q4]]
+
+:: Q4
+# 問題 4（10分）
+
+誰幫 Tom 找教室？
+
+<div class="choice">
+[[小安->Q4A]]
+[[老師->Q4B]]
+</div>
+
+:: Q4A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[下一題->Q5]]
+
+:: Q4B
+❌ 答錯了。
+
+[[下一題->Q5]]
+
+:: Q5
+# 問題 5（10分）
+
+Tom 覺得中文怎麼樣？
+
+<div class="choice">
+[[不太會說->Q5A]]
+[[說得非常好->Q5B]]
+</div>
+
+:: Q5A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[下一題->Q6]]
+
+:: Q5B
+❌ 答錯了。
+
+[[下一題->Q6]]
+
+:: Q6
+# 問題 6（10分）
+
+夜市給 Tom 什麼感覺？
+
+<div class="choice">
+[[很熱鬧->Q6A]]
+[[很安靜->Q6B]]
+</div>
+
+:: Q6A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[下一題->Q7]]
+
+:: Q6B
+❌ 答錯了。
+
+[[下一題->Q7]]
+
+:: Q7
+# 問題 7（10分）
+
+Tom 在夜市吃了什麼？
+
+<div class="choice">
+[[牛肉麵->Q7A]]
+[[壽司->Q7B]]
+</div>
+
+:: Q7A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[下一題->Q8]]
+
+:: Q7B
+❌ 答錯了。
+
+[[下一題->Q8]]
+
+:: Q8
+# 問題 8（10分）
+
+Tom 喝了什麼？
+
+<div class="choice">
+[[珍珠奶茶->Q8A]]
+[[咖啡->Q8B]]
+</div>
+
+:: Q8A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[下一題->Q9]]
+
+:: Q8B
+❌ 答錯了。
+
+[[下一題->Q9]]
+
+:: Q9
+# 問題 9（10分）
+
+小安說下次要帶 Tom 去哪裡？
+
+<div class="choice">
+[[別的地方->Q9A]]
+[[日本->Q9B]]
+</div>
+
+:: Q9A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[下一題->Q10]]
+
+:: Q9B
+❌ 答錯了。
+
+[[下一題->Q10]]
+
+:: Q10
+# 問題 10（10分）
+
+故事最後，Tom 對台灣生活的感覺是什麼？
+
+<div class="choice">
+[[越來越喜歡->Q10A]]
+[[想馬上回國->Q10B]]
+</div>
+
+:: Q10A
+<<set $score += 10>>
+
+✅ 答對了！
+
+[[看結果->Result]]
+
+:: Q10B
+❌ 答錯了。
+
+[[看結果->Result]]
+
+:: Result
+# 測驗結果
+
+你的總分：
+
+# <<print $score>> / 100
+
+<<if $score >= 80>>
+🎉 好棒！
+你的中文閱讀能力很好！
+<<elseif $score >= 60>>
+🙂 還不錯！
+你可以再多練習生詞和句子。
+<<else>>
+💪 加油！
+建議你再閱讀一次故事。
+<</if>>
+
+---
+
+[[重新開始->Start]]
